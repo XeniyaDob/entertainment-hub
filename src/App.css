@@ -1,9 +1,8 @@
 .app {
   min-height: 100vh;
-
-  background-color: #ffffff;
+  background-color: #7b9983;
   color: white;
-  padding-top: 130px;
+  padding-top: 30px;
   padding-bottom: 70px;
 }
 @media (max-width: 600px) {
