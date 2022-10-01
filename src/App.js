@@ -1,4 +1,5 @@
 import "./App.css";
+// eslint-disable-next-line
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Trending from "./Pages/Trending/Trending";
@@ -11,7 +12,6 @@ function App() {
   return (
     <>
       <ResponsiveAppBar />
-
       <div className="app">
         <Container>
           <Routes>

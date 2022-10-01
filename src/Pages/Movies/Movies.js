@@ -5,6 +5,7 @@ import CustomPagination from "../../components/Pagination/CustomPagination";
 import SingleContent from "../../components/SingleContent/SingleContent";
 import Genres from "../../components/Genres";
 import useGenres from "../../Hooks/useGenre";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const Movies = () => {
   const [genres, setGenres] = useState([]);
@@ -13,6 +14,12 @@ const Movies = () => {
   const [content, setContent] = useState([]);
   const [numberOfPages, setNumberOfPages] = useState();
   const genreforURL = useGenres(selectedGenres);
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: "dark",
+    },
+  });
 
   const fetchMovies = async () => {
     const { data } = await axios.get(
@@ -52,7 +59,9 @@ const Movies = () => {
           ))}
       </div>
       {numberOfPages > 1 && (
-        <CustomPagination setPage={setPage} numberOfPages={numberOfPages} />
+        <ThemeProvider theme={darkTheme}>
+          <CustomPagination setPage={setPage} numberOfPages={numberOfPages} />
+        </ThemeProvider>
       )}
     </>
   );

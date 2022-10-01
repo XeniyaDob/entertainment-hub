@@ -37,7 +37,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar sx={{ bgcolor: "success.main" }} position="static">
+    <AppBar sx={{ bgcolor: "rgb(250, 158, 0)" }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -52,7 +52,7 @@ const ResponsiveAppBar = () => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "rgb(0,0,0)",
               textDecoration: "none",
             }}
           >
@@ -91,7 +91,10 @@ const ResponsiveAppBar = () => {
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
                     <NavLink
-                      style={{ textDecoration: "none", color: "green" }}
+                      style={{
+                        textDecoration: "none",
+                        color: "rgb(250, 158, 0)",
+                      }}
                       to={`/${page}`}
                     >
                       {page}
@@ -129,7 +132,7 @@ const ResponsiveAppBar = () => {
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 <NavLink
-                  style={{ textDecoration: "none", color: "white" }}
+                  style={{ textDecoration: "none", color: "rgb(0,0,0)" }}
                   to={`/${page}`}
                 >
                   {page}
