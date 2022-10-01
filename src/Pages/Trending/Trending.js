@@ -12,11 +12,12 @@ const Trending = () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/trending/all/day?api_key=5919f1c554e02d47d9ffbbffdc257d24&page=${page}`
     );
-    console.log(data);
+    //console.log(data);
     setContent(data.results);
   };
   React.useEffect(() => {
     fetchTrending();
+    // eslint-disable-next-line
   }, [page]);
 
   return (
