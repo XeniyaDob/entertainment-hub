@@ -15,6 +15,16 @@ function App() {
       <div className="app">
         <Container>
           <Routes>
+            <Route
+              index
+              exact
+              path="/"
+              element={
+                <div className="logo">
+                  <h1>Landing page. Alpaca/Albatross team. Maybe animation.</h1>
+                </div>
+              }
+            />
             <Route path="/trending" element={<Trending />} />
             <Route path="/movies" element={<Movies />} />
             <Route path="/series" element={<Series />} />

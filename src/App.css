@@ -1,4 +1,6 @@
 .app {
+  display: flex;
+  align-items: center;
   min-height: 100vh;
   background-color: #000000;
   color: rgb(250, 158, 0);
@@ -7,6 +9,8 @@
 }
 @media (max-width: 600px) {
   .app {
+    display: flex;
+    align-items: center;
     padding-top: 70px;
   }
 }
@@ -28,4 +32,9 @@
   .pageTitle {
     font-size: 6.4vw;
   }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

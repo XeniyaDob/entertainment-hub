@@ -11,7 +11,8 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+//import AdbIcon from "@mui/icons-material/Adb";
+import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 import { NavLink } from "react-router-dom";
 
 const pages = ["Trending", "Movies", "Series", "Search"];
@@ -40,7 +41,9 @@ const ResponsiveAppBar = () => {
     <AppBar sx={{ bgcolor: "rgb(250, 158, 0)" }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <LocalMoviesIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -104,7 +107,9 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <LocalMoviesIcon
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+          />
           <Typography
             variant="h5"
             noWrap
