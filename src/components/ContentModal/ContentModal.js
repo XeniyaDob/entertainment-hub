@@ -82,24 +82,6 @@ export default function BasicModal({ children, media_type, id }) {
           <Box sx={style}>
             {content && (
               <div className="ContentModal">
-                <img
-                  src={
-                    content.poster_path
-                      ? `${img_500}/${content.poster_path}`
-                      : unavailable
-                  }
-                  alt={content.name || content.title}
-                  className="ContentModal__portrait"
-                />
-                <img
-                  src={
-                    content.backdrop_path
-                      ? `${img_500}/${content.backdrop_path}`
-                      : unavailableLandscape
-                  }
-                  alt={content.name || content.title}
-                  className="ContentModal__landscape"
-                />
                 <div className="ContentModal__about">
                   <span className="ContentModal__title">
                     {content.name || content.title} (
@@ -124,6 +106,7 @@ export default function BasicModal({ children, media_type, id }) {
                     color="secondary"
                     target="__blank"
                     href={`https://www.youtube.com/watch?v=${video}`}
+                    style={{ backgroundColor: "rgb(250, 158, 0)" }}
                   >
                     Watch the Trailer
                   </Button>

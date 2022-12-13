@@ -29,7 +29,6 @@ const Search = () => {
 
     setContent(data.results);
     setNumOfPages(data.total_pages);
-    console.log(data);
   };
 
   React.useEffect(() => {
@@ -92,9 +91,7 @@ const Search = () => {
             (type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)}
         </div>
         {numOfPages > 1 && (
-          <ThemeProvider theme={darkTheme}>
-            <CustomPagination setPage={setPage} numOfPages={numOfPages} />
-          </ThemeProvider>
+          <CustomPagination setPage={setPage} numOfPages={numOfPages} />
         )}
       </div>
     </>
