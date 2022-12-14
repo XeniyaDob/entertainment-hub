@@ -22,7 +22,7 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: "90%",
   hight: "90%",
-  bgcolor: "background.paper",
+  bgcolor: "#cccccc",
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
@@ -106,7 +106,10 @@ export default function BasicModal({ children, media_type, id }) {
                     color="secondary"
                     target="__blank"
                     href={`https://www.youtube.com/watch?v=${video}`}
-                    style={{ backgroundColor: "rgb(250, 158, 0)" }}
+                    style={{
+                      backgroundColor: "rgb(250, 158, 0)",
+                      margin: "1rem",
+                    }}
                   >
                     Watch the Trailer
                   </Button>
