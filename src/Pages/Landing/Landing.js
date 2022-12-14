@@ -46,7 +46,7 @@ const Landing = () => {
             information about movies, TV shows. As well as trailers for them.
           </Typography>
           <Link
-            to="/Trending"
+            to="/entertainment/trending"
             style={{ textDecoration: "none", color: "white" }}
           >
             <Button

@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 import { NavLink } from "react-router-dom";
 
-const pages = ["Trending", "Movies", "Series", "Search"];
+const pages = ["trending", "movies", "series", "search"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,7 +36,7 @@ const ResponsiveAppBar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/entertainment"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -87,7 +87,7 @@ const ResponsiveAppBar = () => {
                         textDecoration: "none",
                         color: "rgb(0, 0, 0)",
                       }}
-                      to={`/${page}`}
+                      to={`/entertainment/${page}`}
                     >
                       {page}
                     </NavLink>
@@ -103,7 +103,7 @@ const ResponsiveAppBar = () => {
             variant="h5"
             noWrap
             component="a"
-            href="/"
+            href="/entertainment"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -131,7 +131,7 @@ const ResponsiveAppBar = () => {
                     color: "rgb(0,0,0)",
                     fontWeight: "bold",
                   }}
-                  to={`/${page}`}
+                  to={`/entertainment/${page}`}
                 >
                   {page}
                 </NavLink>
